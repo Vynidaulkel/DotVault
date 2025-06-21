@@ -1,0 +1,26 @@
+{
+  "work": {
+    "files": [
+      {
+        "source": "work/.bashrc",
+        "destination": "~/.bashrc"
+      },
+      {
+        "source": "work/.vimrc",
+        "destination": "~/.vimrc"
+      },
+      {
+        "source": "work/.gitconfig",
+        "destination": "~/.gitconfig"
+      }
+    ]
+  },
+  "gaming": {
+    "files": [
+      {
+        "source": "gaming/config.vdf",
+        "destination": "~/.steam/steam/config/config.vdf"
+      }
+    ]
+  }
+}
