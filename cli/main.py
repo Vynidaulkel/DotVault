@@ -5,17 +5,17 @@ def main():
     parser = argparse.ArgumentParser(prog="dotvault", description="Gestor de perfiles de configuración")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    # Comando: link
+    #link
     link_parser = subparsers.add_parser("link", help="Vincula un perfil")
     link_parser.add_argument("profile", help="Nombre del perfil a vincular")
 
-    # Comando: unlink
+    #unlink
     unlink_parser = subparsers.add_parser("unlink", help="Desvincula un perfil")
     unlink_parser.add_argument("profile", help="Nombre del perfil a desvincular")
     unlink_parser.add_argument("--dry-run", action="store_true", help="Simula la desvinculación sin borrar nada")
     unlink_parser.add_argument("--force", action="store_true", help="Elimina archivos reales (con precaución)")
 
-    # Comando: status
+    #status
     status_parser = subparsers.add_parser("status", help="Muestra el estado de todos los perfiles")
 
     args = parser.parse_args()
