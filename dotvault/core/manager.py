@@ -101,7 +101,11 @@ def unlink_profile(profile_name, dry_run=False, force=False):
 
 
 def showList():
-    with open('config/profiles.json', 'r') as f:
+    BASE_DIR = Path(__file__).resolve().parent.parent  
+
+    config_path = BASE_DIR / "config" / "profiles.json"
+
+    with open(config_path, "r") as f:
         data = json.load(f)
         print("Perfiles disponibles: ")
         for profileName in data:
@@ -111,7 +115,11 @@ def showList():
                 print(filename)
 
 def loadStatus():
-    with open('config/profiles.json', 'r') as f:
+    BASE_DIR = Path(__file__).resolve().parent.parent  
+
+    config_path = BASE_DIR / "config" / "profiles.json"
+
+    with open(config_path, "r") as f:
         data = json.load(f)
     for name, profileData in data.items():
         print(f"Perfil : {name}")

@@ -1,5 +1,5 @@
 import argparse
-from core import manager
+from dotvault.core import manager
 
 def main():
     parser = argparse.ArgumentParser(prog="dotvault", description="Gestor de perfiles de configuración")
